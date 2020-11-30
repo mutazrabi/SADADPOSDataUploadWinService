@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://api.nayifat.com/OnlineCreditCard/CreditCardService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" />
+  <xs:import schemaLocation="https://api.nayifat.com/OnlineCreditCard/CreditCardService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CreditCardOnlineService" />
+  <xs:element name="ActivateBlockCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="request" nillable="true" type="q1:request_block_card" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActivateBlockCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="ActivateBlockCardResult" nillable="true" type="q2:response_block_card" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnCardBalance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="request" nillable="true" type="q3:request_card_balance_enquiry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnCardBalanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="ReturnCardBalanceResult" nillable="true" type="q4:response_card_balance_enquiry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnCreditCardDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="request" nillable="true" type="q5:request_card_details" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnCreditCardDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="ReturnCreditCardDetailsResult" nillable="true" type="q6:response_card_details" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnCreditCardMiniStatment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="request" nillable="true" type="q7:request_card_mini_statement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnCreditCardMiniStatmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="ReturnCreditCardMiniStatmentResult" nillable="true" type="q8:response_card_mini_statement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnCreditCardStatment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="request" nillable="true" type="q9:request_card_statement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnCreditCardStatmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="ReturnCreditCardStatmentResult" nillable="true" type="q10:response_card_statement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnCreditCardPinVerification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="request" nillable="true" type="q11:request_card_pin_verification" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnCreditCardPinVerificationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="ReturnCreditCardPinVerificationResult" nillable="true" type="q12:response_card_pin_verification" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnCreditCardPostedTransactions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="request" nillable="true" type="q13:request_card_posted_transactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnCreditCardPostedTransactionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="ReturnCreditCardPostedTransactionsResult" nillable="true" type="q14:response_card_posted_transactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MaintainCustomerCreditCardDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="request" nillable="true" type="q15:request_maintain_card_customer_details" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MaintainCustomerCreditCardDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="MaintainCustomerCreditCardDetailsResult" nillable="true" type="q16:response_maintain_card_customer_details" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllowCreditCardPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="request" nillable="true" type="q17:request_card_payment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllowCreditCardPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="AllowCreditCardPaymentResult" nillable="true" type="q18:response_card_payment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCreditCardPinCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="request" nillable="true" type="q19:request_card_activation_set_pin" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCreditCardPinCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="SetCreditCardPinCodeResult" nillable="true" type="q20:response_card_activation_set_pin" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAllCustomerCards">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="request" nillable="true" type="q21:request_credit_card_list" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAllCustomerCardsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" minOccurs="0" name="ListAllCustomerCardsResult" nillable="true" type="q22:response_creditcardlist" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPOSTransactions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/CreditCardOnlineService" minOccurs="0" name="request" nillable="true" type="q23:POSSearchRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPOSTransactionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/CreditCardOnlineService" minOccurs="0" name="GetPOSTransactionsResult" nillable="true" type="q24:POSSearchResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="POSSubmitTransactions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/CreditCardOnlineService" minOccurs="0" name="request" nillable="true" type="q25:POSSubmitView" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="POSSubmitTransactionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/CreditCardOnlineService" minOccurs="0" name="POSSubmitTransactionsResult" nillable="true" type="q26:POSSubmitResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://api.nayifat.com/OnlineCreditCard/CreditCardService.svc?xsd=xsd0" filename="CreditCardService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="file:///D:/Repos/Nayifat Proj/SADADPOSDataUploadWinService/CreditCardService.WSDL" filename="CreditCardService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://api.nayifat.com/OnlineCreditCard/CreditCardService.svc?xsd=xsd2" filename="CreditCardService0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://api.nayifat.com/OnlineCreditCard/CreditCardService.svc?xsd=xsd3" filename="CreditCardService1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://api.nayifat.com/OnlineCreditCard/CreditCardService.svc?xsd=xsd1" filename="CreditCardService2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://api.nayifat.com/OnlineCreditCard/CreditCardService.svc?xsd=xsd4" filename="CreditCardService3.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

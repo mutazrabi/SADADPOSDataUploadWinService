@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CreditCardOnlineService.CreditCardWebService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="request_block_card">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:BlockCardReq" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_block_card" nillable="true" type="tns:request_block_card" />
+  <xs:complexType name="BlockCardReq">
+    <xs:sequence>
+      <xs:element name="block_codeField" nillable="true" type="xs:string" />
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+      <xs:element name="card_typeField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlockCardReq" nillable="true" type="tns:BlockCardReq" />
+  <xs:complexType name="HeaderType">
+    <xs:sequence>
+      <xs:element name="bank_idField" nillable="true" type="xs:string" />
+      <xs:element name="instance_idField" nillable="true" type="xs:string" />
+      <xs:element name="msg_functionField" nillable="true" type="xs:string" />
+      <xs:element name="msg_idField" nillable="true" type="xs:string" />
+      <xs:element name="msg_typeField" nillable="true" type="xs:string" />
+      <xs:element name="src_applicationField" nillable="true" type="xs:string" />
+      <xs:element name="statusField" nillable="true" type="xs:string" />
+      <xs:element name="target_applicationField" nillable="true" type="xs:string" />
+      <xs:element name="timestampField" nillable="true" type="xs:string" />
+      <xs:element name="tracking_idField" nillable="true" type="xs:string" />
+      <xs:element name="user_idField" nillable="true" type="xs:string" />
+      <xs:element name="versionField" nillable="true" type="xs:string" />
+      <xs:element name="work_station_idField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HeaderType" nillable="true" type="tns:HeaderType" />
+  <xs:complexType name="response_block_card">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="xs:string" />
+      <xs:element name="exception_detailsField" nillable="true" type="tns:ErrorMessageType" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_block_card" nillable="true" type="tns:response_block_card" />
+  <xs:complexType name="ErrorMessageType">
+    <xs:sequence>
+      <xs:element name="application_nameField" nillable="true" type="xs:string" />
+      <xs:element name="dataField" nillable="true" type="xs:string" />
+      <xs:element name="date_timeField" nillable="true" type="xs:string" />
+      <xs:element name="error_codeField" nillable="true" type="xs:string" />
+      <xs:element name="error_descriptionField" nillable="true" type="xs:string" />
+      <xs:element name="statusField" nillable="true" type="xs:string" />
+      <xs:element name="traceField" nillable="true" type="xs:string" />
+      <xs:element name="transaction_ref_idField" nillable="true" type="xs:string" />
+      <xs:element name="typeField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorMessageType" nillable="true" type="tns:ErrorMessageType" />
+  <xs:complexType name="HeaderType1">
+    <xs:sequence>
+      <xs:element name="bank_idField" nillable="true" type="xs:string" />
+      <xs:element name="instance_idField" nillable="true" type="xs:string" />
+      <xs:element name="msg_functionField" nillable="true" type="xs:string" />
+      <xs:element name="msg_idField" nillable="true" type="xs:string" />
+      <xs:element name="msg_typeField" nillable="true" type="xs:string" />
+      <xs:element name="src_applicationField" nillable="true" type="xs:string" />
+      <xs:element name="statusField" nillable="true" type="xs:string" />
+      <xs:element name="target_applicationField" nillable="true" type="xs:string" />
+      <xs:element name="timestampField" nillable="true" type="xs:string" />
+      <xs:element name="tracking_idField" nillable="true" type="xs:string" />
+      <xs:element name="user_idField" nillable="true" type="xs:string" />
+      <xs:element name="versionField" nillable="true" type="xs:string" />
+      <xs:element name="work_station_idField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HeaderType1" nillable="true" type="tns:HeaderType1" />
+  <xs:complexType name="request_card_balance_enquiry">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:request_card_balance_enquiryBody" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_card_balance_enquiry" nillable="true" type="tns:request_card_balance_enquiry" />
+  <xs:complexType name="request_card_balance_enquiryBody">
+    <xs:sequence>
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_card_balance_enquiryBody" nillable="true" type="tns:request_card_balance_enquiryBody" />
+  <xs:complexType name="response_card_balance_enquiry">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:CardBalanceEnquiryNode" />
+      <xs:element name="exception_detailsField" nillable="true" type="tns:ErrorMessageType" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_card_balance_enquiry" nillable="true" type="tns:response_card_balance_enquiry" />
+  <xs:complexType name="CardBalanceEnquiryNode">
+    <xs:sequence>
+      <xs:element name="account_block_code1Field" nillable="true" type="xs:string" />
+      <xs:element name="account_block_code2Field" nillable="true" type="xs:string" />
+      <xs:element name="available_cashField" nillable="true" type="xs:string" />
+      <xs:element name="available_creditField" nillable="true" type="xs:string" />
+      <xs:element name="card_account_available_creditField" nillable="true" type="xs:string" />
+      <xs:element name="card_account_limitField" nillable="true" type="xs:string" />
+      <xs:element name="card_account_noField" nillable="true" type="xs:string" />
+      <xs:element name="card_block_codeField" nillable="true" type="xs:string" />
+      <xs:element name="card_brandField" nillable="true" type="xs:string" />
+      <xs:element name="card_currencyField" nillable="true" type="xs:string" />
+      <xs:element name="card_limitField" nillable="true" type="xs:string" />
+      <xs:element name="card_logo_descriptionField" nillable="true" type="xs:string" />
+      <xs:element name="card_nameField" nillable="true" type="xs:string" />
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+      <xs:element name="card_statusField" nillable="true" type="xs:string" />
+      <xs:element name="cash_limitField" nillable="true" type="xs:string" />
+      <xs:element name="cif_idField" nillable="true" type="xs:string" />
+      <xs:element name="due_dateField" nillable="true" type="xs:string" />
+      <xs:element name="expiry_dateField" nillable="true" type="xs:string" />
+      <xs:element name="last_payment_amountField" nillable="true" type="xs:string" />
+      <xs:element name="last_payment_dateField" nillable="true" type="xs:string" />
+      <xs:element name="last_purchase_amountField" nillable="true" type="xs:string" />
+      <xs:element name="last_purchase_dateField" nillable="true" type="xs:string" />
+      <xs:element name="min_paymentField" nillable="true" type="xs:string" />
+      <xs:element name="new_expiry_dateField" nillable="true" type="xs:string" />
+      <xs:element name="outstanding_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="overlimit_amountField" nillable="true" type="xs:string" />
+      <xs:element name="overlimit_flagField" nillable="true" type="xs:string" />
+      <xs:element name="past_due_amountField" nillable="true" type="xs:string" />
+      <xs:element name="past_due_flagField" nillable="true" type="xs:string" />
+      <xs:element name="renewal_card_flagField" nillable="true" type="xs:string" />
+      <xs:element name="reward_programsField" nillable="true" type="tns:ArrayOfRewardPrograms" />
+      <xs:element name="shadow_creditField" nillable="true" type="xs:string" />
+      <xs:element name="shadow_debitField" nillable="true" type="xs:string" />
+      <xs:element name="statement_closing_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="statement_dateField" nillable="true" type="xs:string" />
+      <xs:element name="statement_dueField" nillable="true" type="xs:string" />
+      <xs:element name="statement_opening_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="statement_outstanding_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="unbilled_amountField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CardBalanceEnquiryNode" nillable="true" type="tns:CardBalanceEnquiryNode" />
+  <xs:complexType name="ArrayOfRewardPrograms">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RewardPrograms" nillable="true" type="tns:RewardPrograms" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRewardPrograms" nillable="true" type="tns:ArrayOfRewardPrograms" />
+  <xs:complexType name="RewardPrograms">
+    <xs:sequence>
+      <xs:element name="club_reward_open_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="reward_adjustField" nillable="true" type="xs:string" />
+      <xs:element name="reward_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="reward_earnedField" nillable="true" type="xs:string" />
+      <xs:element name="reward_open_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="reward_redeemedField" nillable="true" type="xs:string" />
+      <xs:element name="reward_total_earnedField" nillable="true" type="xs:string" />
+      <xs:element name="reward_typeField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RewardPrograms" nillable="true" type="tns:RewardPrograms" />
+  <xs:complexType name="request_card_details">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:request_card_detailsBody" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_card_details" nillable="true" type="tns:request_card_details" />
+  <xs:complexType name="request_card_detailsBody">
+    <xs:sequence>
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+      <xs:element name="card_typeField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_card_detailsBody" nillable="true" type="tns:request_card_detailsBody" />
+  <xs:complexType name="response_card_details">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:response_card_detailsBody" />
+      <xs:element name="exception_detailsField" nillable="true" type="tns:ErrorMessageType" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_card_details" nillable="true" type="tns:response_card_details" />
+  <xs:complexType name="response_card_detailsBody">
+    <xs:sequence>
+      <xs:element name="address_detailsField" nillable="true" type="tns:ArrayOfAddressDetails" />
+      <xs:element name="card_detailsField" nillable="true" type="tns:CardDetailsNode" />
+      <xs:element name="contact_detailsField" nillable="true" type="tns:ArrayOfContactDetails" />
+      <xs:element name="employment_detailsField" nillable="true" type="tns:EmploymentDetails" />
+      <xs:element name="other_detailsField" nillable="true" type="tns:OtherDetails" />
+      <xs:element name="personal_detailsField" nillable="true" type="tns:PersonalDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_card_detailsBody" nillable="true" type="tns:response_card_detailsBody" />
+  <xs:complexType name="ArrayOfAddressDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AddressDetails" nillable="true" type="tns:AddressDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddressDetails" nillable="true" type="tns:ArrayOfAddressDetails" />
+  <xs:complexType name="AddressDetails">
+    <xs:sequence>
+      <xs:element name="address_line_1Field" nillable="true" type="xs:string" />
+      <xs:element name="address_line_2Field" nillable="true" type="xs:string" />
+      <xs:element name="address_typeField" nillable="true" type="xs:string" />
+      <xs:element name="building_nameField" nillable="true" type="xs:string" />
+      <xs:element name="cityField" nillable="true" type="xs:string" />
+      <xs:element name="countryField" nillable="true" type="xs:string" />
+      <xs:element name="house_numberField" nillable="true" type="xs:string" />
+      <xs:element name="landlord_nameField" nillable="true" type="xs:string" />
+      <xs:element name="locationField" nillable="true" type="xs:string" />
+      <xs:element name="ownership_typeField" nillable="true" type="xs:string" />
+      <xs:element name="stateField" nillable="true" type="xs:string" />
+      <xs:element name="streetField" nillable="true" type="xs:string" />
+      <xs:element name="zipField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddressDetails" nillable="true" type="tns:AddressDetails" />
+  <xs:complexType name="CardDetailsNode">
+    <xs:sequence>
+      <xs:element name="account_block_code1Field" nillable="true" type="xs:string" />
+      <xs:element name="account_block_code2Field" nillable="true" type="xs:string" />
+      <xs:element name="account_block_date1Field" nillable="true" type="xs:string" />
+      <xs:element name="account_block_date2Field" nillable="true" type="xs:string" />
+      <xs:element name="accrued_interestField" nillable="true" type="xs:string" />
+      <xs:element name="available_cashField" nillable="true" type="xs:string" />
+      <xs:element name="available_creditField" nillable="true" type="xs:string" />
+      <xs:element name="billing_cycleField" nillable="true" type="xs:string" />
+      <xs:element name="card_account_available_creditField" nillable="true" type="xs:string" />
+      <xs:element name="card_account_limitField" nillable="true" type="xs:string" />
+      <xs:element name="card_account_noField" nillable="true" type="xs:string" />
+      <xs:element name="card_activation_dateField" nillable="true" type="xs:string" />
+      <xs:element name="card_block_codeField" nillable="true" type="xs:string" />
+      <xs:element name="card_block_code_dateField" nillable="true" type="xs:string" />
+      <xs:element name="card_branch_codeField" nillable="true" type="xs:string" />
+      <xs:element name="card_brandField" nillable="true" type="xs:string" />
+      <xs:element name="card_creation_dateField" nillable="true" type="xs:string" />
+      <xs:element name="card_currencyField" nillable="true" type="xs:string" />
+      <xs:element name="card_delivery_codeField" nillable="true" type="xs:string" />
+      <xs:element name="card_issuance_dateField" nillable="true" type="xs:string" />
+      <xs:element name="card_limitField" nillable="true" type="xs:string" />
+      <xs:element name="card_limit_percentageField" nillable="true" type="xs:string" />
+      <xs:element name="card_logo_descriptionField" nillable="true" type="xs:string" />
+      <xs:element name="card_nameField" nillable="true" type="xs:string" />
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+      <xs:element name="card_pctField" nillable="true" type="xs:string" />
+      <xs:element name="card_statusField" nillable="true" type="xs:string" />
+      <xs:element name="card_typeField" nillable="true" type="xs:string" />
+      <xs:element name="cash_limitField" nillable="true" type="xs:string" />
+      <xs:element name="cash_limit_percentageField" nillable="true" type="xs:string" />
+      <xs:element name="cif_idField" nillable="true" type="xs:string" />
+      <xs:element name="civil_idField" nillable="true" type="xs:string" />
+      <xs:element name="ctd_cashField" nillable="true" type="xs:string" />
+      <xs:element name="ctd_retail_purchasesField" nillable="true" type="xs:string" />
+      <xs:element name="ctd_retail_returnsField" nillable="true" type="xs:string" />
+      <xs:element name="current_card_activation_flagField" nillable="true" type="xs:string" />
+      <xs:element name="current_card_expiry_dateField" nillable="true" type="xs:string" />
+      <xs:element name="current_credit_limit_dateField" nillable="true" type="xs:string" />
+      <xs:element name="customer_typeField" nillable="true" type="xs:string" />
+      <xs:element name="cycle_paymentsField" nillable="true" type="xs:string" />
+      <xs:element name="direct_debit_accountField" nillable="true" type="xs:string" />
+      <xs:element name="direct_debit_dateField" nillable="true" type="xs:string" />
+      <xs:element name="direct_debit_flagField" nillable="true" type="xs:string" />
+      <xs:element name="direct_debit_percentageField" nillable="true" type="xs:string" />
+      <xs:element name="direct_debit_request_dayField" nillable="true" type="xs:string" />
+      <xs:element name="due_dateField" nillable="true" type="xs:string" />
+      <xs:element name="due_date_with_grace_periodField" nillable="true" type="xs:string" />
+      <xs:element name="embosser_last_maintenance_dateField" nillable="true" type="xs:string" />
+      <xs:element name="expiry_dateField" nillable="true" type="xs:string" />
+      <xs:element name="highest_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="highest_balance_dateField" nillable="true" type="xs:string" />
+      <xs:element name="installment_plansField" nillable="true" type="tns:ArrayOfInstallmentPlans" />
+      <xs:element name="insurance_productsField" nillable="true" type="tns:ArrayOfInsuranceProducts" />
+      <xs:element name="interest_freeField" nillable="true" type="xs:string" />
+      <xs:element name="interest_this_statementField" nillable="true" type="xs:string" />
+      <xs:element name="last_card_activation_flagField" nillable="true" type="xs:string" />
+      <xs:element name="last_card_expiry_dateField" nillable="true" type="xs:string" />
+      <xs:element name="last_credit_limitField" nillable="true" type="xs:string" />
+      <xs:element name="last_credit_limit_increase_dateField" nillable="true" type="xs:string" />
+      <xs:element name="last_payment_amountField" nillable="true" type="xs:string" />
+      <xs:element name="last_payment_dateField" nillable="true" type="xs:string" />
+      <xs:element name="last_purchase_amountField" nillable="true" type="xs:string" />
+      <xs:element name="last_purchase_dateField" nillable="true" type="xs:string" />
+      <xs:element name="last_statement_dateField" nillable="true" type="xs:string" />
+      <xs:element name="ltd_cashField" nillable="true" type="xs:string" />
+      <xs:element name="ltd_purhcaseField" nillable="true" type="xs:string" />
+      <xs:element name="ltd_retail_purchaseField" nillable="true" type="xs:string" />
+      <xs:element name="min_paymentField" nillable="true" type="xs:string" />
+      <xs:element name="next_card_fee_recovery_dateField" nillable="true" type="xs:string" />
+      <xs:element name="next_statement_dateField" nillable="true" type="xs:string" />
+      <xs:element name="no_of_installments_plannedField" nillable="true" type="xs:string" />
+      <xs:element name="no_of_plansField" nillable="true" type="xs:string" />
+      <xs:element name="outstanding_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="overlimit_amountField" nillable="true" type="xs:string" />
+      <xs:element name="overlimit_flagField" nillable="true" type="xs:string" />
+      <xs:element name="past_due_amountField" nillable="true" type="xs:string" />
+      <xs:element name="past_due_flagField" nillable="true" type="xs:string" />
+      <xs:element name="plansField" nillable="true" type="tns:ArrayOfPlans" />
+      <xs:element name="product_typeField" nillable="true" type="xs:string" />
+      <xs:element name="relationship_start_dateField" nillable="true" type="xs:string" />
+      <xs:element name="renewal_card_flagField" nillable="true" type="xs:string" />
+      <xs:element name="reward_programsField" nillable="true" type="tns:ArrayOfRewardPrograms" />
+      <xs:element name="setup_dateField" nillable="true" type="xs:string" />
+      <xs:element name="shadow_creditField" nillable="true" type="xs:string" />
+      <xs:element name="shadow_debitField" nillable="true" type="xs:string" />
+      <xs:element name="si_start_dateField" nillable="true" type="xs:string" />
+      <xs:element name="statement_closing_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="statement_dueField" nillable="true" type="xs:string" />
+      <xs:element name="statement_opening_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="statement_outstanding_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="total_cycle_creditField" nillable="true" type="xs:string" />
+      <xs:element name="total_cycle_debitField" nillable="true" type="xs:string" />
+      <xs:element name="unbilled_amountField" nillable="true" type="xs:string" />
+      <xs:element name="ytd_cashField" nillable="true" type="xs:string" />
+      <xs:element name="ytd_interest_recoveredField" nillable="true" type="xs:string" />
+      <xs:element name="ytd_late_payment_fees_recoveredField" nillable="true" type="xs:string" />
+      <xs:element name="ytd_ovl_charges_recoveredField" nillable="true" type="xs:string" />
+      <xs:element name="ytd_retail_purchaseField" nillable="true" type="xs:string" />
+      <xs:element name="ytd_retail_returnsField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CardDetailsNode" nillable="true" type="tns:CardDetailsNode" />
+  <xs:complexType name="ArrayOfInstallmentPlans">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InstallmentPlans" nillable="true" type="tns:InstallmentPlans" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInstallmentPlans" nillable="true" type="tns:ArrayOfInstallmentPlans" />
+  <xs:complexType name="InstallmentPlans">
+    <xs:sequence>
+      <xs:element name="calc_rateField" nillable="true" type="xs:string" />
+      <xs:element name="emi_interestField" nillable="true" type="xs:string" />
+      <xs:element name="emi_principleField" nillable="true" type="xs:string" />
+      <xs:element name="foreclosure_indicatorField" nillable="true" type="xs:string" />
+      <xs:element name="installment_amount_billedField" nillable="true" type="xs:string" />
+      <xs:element name="installment_amount_remainingField" nillable="true" type="xs:string" />
+      <xs:element name="installment_descriptionField" nillable="true" type="xs:string" />
+      <xs:element name="installment_plan_typeField" nillable="true" type="xs:string" />
+      <xs:element name="interest_amountField" nillable="true" type="xs:string" />
+      <xs:element name="interest_amount_billedField" nillable="true" type="xs:string" />
+      <xs:element name="interest_amount_remainingField" nillable="true" type="xs:string" />
+      <xs:element name="monthly_installment_amountField" nillable="true" type="xs:string" />
+      <xs:element name="no_of_installements_remainingField" nillable="true" type="xs:string" />
+      <xs:element name="plan_dateField" nillable="true" type="xs:string" />
+      <xs:element name="principle_amountField" nillable="true" type="xs:string" />
+      <xs:element name="principle_amount_billedField" nillable="true" type="xs:string" />
+      <xs:element name="principle_amount_remainingField" nillable="true" type="xs:string" />
+      <xs:element name="total_no_of_installmentsField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InstallmentPlans" nillable="true" type="tns:InstallmentPlans" />
+  <xs:complexType name="ArrayOfInsuranceProducts">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InsuranceProducts" nillable="true" type="tns:InsuranceProducts" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInsuranceProducts" nillable="true" type="tns:ArrayOfInsuranceProducts" />
+  <xs:complexType name="InsuranceProducts">
+    <xs:sequence>
+      <xs:element name="activated_dateField" nillable="true" type="xs:string" />
+      <xs:element name="active_flagField" nillable="true" type="xs:string" />
+      <xs:element name="deactivated_dateField" nillable="true" type="xs:string" />
+      <xs:element name="insurance_statusField" nillable="true" type="xs:string" />
+      <xs:element name="insurance_typeField" nillable="true" type="xs:string" />
+      <xs:element name="reinstatedField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InsuranceProducts" nillable="true" type="tns:InsuranceProducts" />
+  <xs:complexType name="ArrayOfPlans">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Plans" nillable="true" type="tns:Plans" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlans" nillable="true" type="tns:ArrayOfPlans" />
+  <xs:complexType name="Plans">
+    <xs:sequence>
+      <xs:element name="accrued_interestField" nillable="true" type="xs:string" />
+      <xs:element name="deferred_interestField" nillable="true" type="xs:string" />
+      <xs:element name="minimum_amount_dueField" nillable="true" type="xs:string" />
+      <xs:element name="outstanding_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="payment_creditedField" nillable="true" type="xs:string" />
+      <xs:element name="perdiem_interestField" nillable="true" type="xs:string" />
+      <xs:element name="plan_numberField" nillable="true" type="xs:string" />
+      <xs:element name="plan_open_dateField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Plans" nillable="true" type="tns:Plans" />
+  <xs:complexType name="ArrayOfContactDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactDetails" nillable="true" type="tns:ContactDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContactDetails" nillable="true" type="tns:ArrayOfContactDetails" />
+  <xs:complexType name="ContactDetails">
+    <xs:sequence>
+      <xs:element name="contact_noField" nillable="true" type="xs:string" />
+      <xs:element name="contact_typeField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactDetails" nillable="true" type="tns:ContactDetails" />
+  <xs:complexType name="EmploymentDetails">
+    <xs:sequence>
+      <xs:element name="company_nameField" nillable="true" type="xs:string" />
+      <xs:element name="employer_address1Field" nillable="true" type="xs:string" />
+      <xs:element name="employer_address2Field" nillable="true" type="xs:string" />
+      <xs:element name="employer_nameField" nillable="true" type="xs:string" />
+      <xs:element name="occupationField" nillable="true" type="xs:string" />
+      <xs:element name="staff_idField" nillable="true" type="xs:string" />
+      <xs:element name="years_workedField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmploymentDetails" nillable="true" type="tns:EmploymentDetails" />
+  <xs:complexType name="OtherDetails">
+    <xs:sequence>
+      <xs:element name="memo_line_1Field" nillable="true" type="xs:string" />
+      <xs:element name="memo_line_2Field" nillable="true" type="xs:string" />
+      <xs:element name="sms_flagField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OtherDetails" nillable="true" type="tns:OtherDetails" />
+  <xs:complexType name="PersonalDetails">
+    <xs:sequence>
+      <xs:element name="date_of_birthField" nillable="true" type="xs:string" />
+      <xs:element name="driving_license_noField" nillable="true" type="xs:string" />
+      <xs:element name="email_addressField" nillable="true" type="xs:string" />
+      <xs:element name="genderField" nillable="true" type="xs:string" />
+      <xs:element name="mothers_maiden_nameField" nillable="true" type="xs:string" />
+      <xs:element name="mothers_nameField" nillable="true" type="xs:string" />
+      <xs:element name="name_line_1Field" nillable="true" type="xs:string" />
+      <xs:element name="name_line_2Field" nillable="true" type="xs:string" />
+      <xs:element name="name_line_3Field" nillable="true" type="xs:string" />
+      <xs:element name="nationalityField" nillable="true" type="xs:string" />
+      <xs:element name="no_of_dependentsField" nillable="true" type="xs:string" />
+      <xs:element name="passport_nameField" nillable="true" type="xs:string" />
+      <xs:element name="passport_noField" nillable="true" type="xs:string" />
+      <xs:element name="preferred_nameField" nillable="true" type="xs:string" />
+      <xs:element name="short_nameField" nillable="true" type="xs:string" />
+      <xs:element name="statement_flagField" nillable="true" type="xs:string" />
+      <xs:element name="typeField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalDetails" nillable="true" type="tns:PersonalDetails" />
+  <xs:complexType name="request_card_mini_statement">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:request_card_mini_statementBody" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_card_mini_statement" nillable="true" type="tns:request_card_mini_statement" />
+  <xs:complexType name="request_card_mini_statementBody">
+    <xs:sequence>
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+      <xs:element name="no_of_transactionsField" nillable="true" type="xs:string" />
+      <xs:element name="request_typeField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_card_mini_statementBody" nillable="true" type="tns:request_card_mini_statementBody" />
+  <xs:complexType name="response_card_mini_statement">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:response_card_mini_statementBody" />
+      <xs:element name="exception_detailsField" nillable="true" type="tns:ErrorMessageType" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_card_mini_statement" nillable="true" type="tns:response_card_mini_statement" />
+  <xs:complexType name="response_card_mini_statementBody">
+    <xs:sequence>
+      <xs:element name="card_detailsField" nillable="true" type="tns:CardMiniStmtNode" />
+      <xs:element name="total_no_of_transactionsField" nillable="true" type="xs:string" />
+      <xs:element name="transaction_detailsField" nillable="true" type="tns:ArrayOftransaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_card_mini_statementBody" nillable="true" type="tns:response_card_mini_statementBody" />
+  <xs:complexType name="CardMiniStmtNode">
+    <xs:sequence>
+      <xs:element name="account_block_code1Field" nillable="true" type="xs:string" />
+      <xs:element name="account_block_code2Field" nillable="true" type="xs:string" />
+      <xs:element name="available_cashField" nillable="true" type="xs:string" />
+      <xs:element name="available_creditField" nillable="true" type="xs:string" />
+      <xs:element name="card_account_available_creditField" nillable="true" type="xs:string" />
+      <xs:element name="card_account_limitField" nillable="true" type="xs:string" />
+      <xs:element name="card_account_noField" nillable="true" type="xs:string" />
+      <xs:element name="card_block_codeField" nillable="true" type="xs:string" />
+      <xs:element name="card_brandField" nillable="true" type="xs:string" />
+      <xs:element name="card_currencyField" nillable="true" type="xs:string" />
+      <xs:element name="card_limitField" nillable="true" type="xs:string" />
+      <xs:element name="card_logo_descriptionField" nillable="true" type="xs:string" />
+      <xs:element name="card_nameField" nillable="true" type="xs:string" />
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+      <xs:element name="card_statusField" nillable="true" type="xs:string" />
+      <xs:element name="card_typeField" nillable="true" type="xs:string" />
+      <xs:element name="cash_limitField" nillable="true" type="xs:string" />
+      <xs:element name="due_dateField" nillable="true" type="xs:string" />
+      <xs:element name="expiry_dateField" nillable="true" type="xs:string" />
+      <xs:element name="last_payment_amountField" nillable="true" type="xs:string" />
+      <xs:element name="last_payment_dateField" nillable="true" type="xs:string" />
+      <xs:element name="last_purchase_amountField" nillable="true" type="xs:string" />
+      <xs:element name="last_purchase_dateField" nillable="true" type="xs:string" />
+      <xs:element name="last_statement_dateField" nillable="true" type="xs:string" />
+      <xs:element name="limit_typeField" nillable="true" type="xs:string" />
+      <xs:element name="min_paymentField" nillable="true" type="xs:string" />
+      <xs:element name="next_statement_dateField" nillable="true" type="xs:string" />
+      <xs:element name="outstanding_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="overlimit_amountField" nillable="true" type="xs:string" />
+      <xs:element name="overlimit_flagField" nillable="true" type="xs:string" />
+      <xs:element name="past_due_amountField" nillable="true" type="xs:string" />
+      <xs:element name="past_due_flagField" nillable="true" type="xs:string" />
+      <xs:element name="product_typeField" nillable="true" type="xs:string" />
+      <xs:element name="renewal_card_flagField" nillable="true" type="xs:string" />
+      <xs:element name="unbilled_amountField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CardMiniStmtNode" nillable="true" type="tns:CardMiniStmtNode" />
+  <xs:complexType name="ArrayOftransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="transaction" nillable="true" type="tns:transaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftransaction" nillable="true" type="tns:ArrayOftransaction" />
+  <xs:complexType name="transaction">
+    <xs:sequence>
+      <xs:element name="amountField" nillable="true" type="xs:string" />
+      <xs:element name="auth_codeField" nillable="true" type="xs:string" />
+      <xs:element name="authorization_indicatorField" nillable="true" type="xs:string" />
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+      <xs:element name="currencyField" nillable="true" type="xs:string" />
+      <xs:element name="dateField" nillable="true" type="xs:string" />
+      <xs:element name="debit_credit_flagField" nillable="true" type="xs:string" />
+      <xs:element name="descriptionField" nillable="true" type="xs:string" />
+      <xs:element name="merchant_addressField" nillable="true" type="xs:string" />
+      <xs:element name="merchant_cityField" nillable="true" type="xs:string" />
+      <xs:element name="merchant_countryField" nillable="true" type="xs:string" />
+      <xs:element name="merchant_faxField" nillable="true" type="xs:string" />
+      <xs:element name="merchant_idField" nillable="true" type="xs:string" />
+      <xs:element name="merchant_phoneField" nillable="true" type="xs:string" />
+      <xs:element name="plan_noField" nillable="true" type="xs:string" />
+      <xs:element name="plan_numberField" nillable="true" type="xs:string" />
+      <xs:element name="post_dateField" nillable="true" type="xs:string" />
+      <xs:element name="response_codeField" nillable="true" type="xs:string" />
+      <xs:element name="running_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="source_amountField" nillable="true" type="xs:string" />
+      <xs:element name="source_currencyField" nillable="true" type="xs:string" />
+      <xs:element name="transaction_codeField" nillable="true" type="xs:string" />
+      <xs:element name="transaction_timeField" nillable="true" type="xs:string" />
+      <xs:element name="txn_reference_idField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="transaction" nillable="true" type="tns:transaction" />
+  <xs:complexType name="request_card_statement">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:request_card_statementBody" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_card_statement" nillable="true" type="tns:request_card_statement" />
+  <xs:complexType name="request_card_statementBody">
+    <xs:sequence>
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+      <xs:element name="itemElementNameField" type="tns:ItemChoiceType" />
+      <xs:element name="itemField" nillable="true" type="xs:string" />
+      <xs:element name="no_of_transactionsField" nillable="true" type="xs:string" />
+      <xs:element name="request_typeField" nillable="true" type="xs:string" />
+      <xs:element name="transaction_pointerField" nillable="true" type="xs:string" />
+      <xs:element name="transaction_to_dateField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_card_statementBody" nillable="true" type="tns:request_card_statementBody" />
+  <xs:simpleType name="ItemChoiceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="statement_date" />
+      <xs:enumeration value="transaction_from_date" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ItemChoiceType" nillable="true" type="tns:ItemChoiceType" />
+  <xs:complexType name="response_card_statement">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:response_card_statementBody" />
+      <xs:element name="exception_detailsField" nillable="true" type="tns:ErrorMessageType" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_card_statement" nillable="true" type="tns:response_card_statement" />
+  <xs:complexType name="response_card_statementBody">
+    <xs:sequence>
+      <xs:element name="address_detailsField" nillable="true" type="tns:AddressDetails" />
+      <xs:element name="card_detailsField" nillable="true" type="tns:CardStmtDetailsNode" />
+      <xs:element name="contact_detailsField" nillable="true" type="tns:ContactDetails" />
+      <xs:element name="employment_detailsField" nillable="true" type="tns:EmploymentDetails" />
+      <xs:element name="end_of_txns_indicatorField" nillable="true" type="xs:string" />
+      <xs:element name="personal_detailsField" nillable="true" type="tns:PersonalDetails" />
+      <xs:element name="plansField" nillable="true" type="tns:ArrayOfresponse_card_statementBodyPlans" />
+      <xs:element name="statement_detailsField" nillable="true" type="tns:ArrayOfStatementsDetails" />
+      <xs:element name="total_no_of_transactionsField" nillable="true" type="xs:string" />
+      <xs:element name="transaction_detailsField" nillable="true" type="tns:ArrayOftransaction" />
+      <xs:element name="transaction_pointerField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_card_statementBody" nillable="true" type="tns:response_card_statementBody" />
+  <xs:complexType name="CardStmtDetailsNode">
+    <xs:sequence>
+      <xs:element name="account_block_code1Field" nillable="true" type="xs:string" />
+      <xs:element name="account_block_code2Field" nillable="true" type="xs:string" />
+      <xs:element name="available_cashField" nillable="true" type="xs:string" />
+      <xs:element name="available_creditField" nillable="true" type="xs:string" />
+      <xs:element name="card_block_codeField" nillable="true" type="xs:string" />
+      <xs:element name="card_brandField" nillable="true" type="xs:string" />
+      <xs:element name="card_currencyField" nillable="true" type="xs:string" />
+      <xs:element name="card_limitField" nillable="true" type="xs:string" />
+      <xs:element name="card_logo_descriptionField" nillable="true" type="xs:string" />
+      <xs:element name="card_nameField" nillable="true" type="xs:string" />
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+      <xs:element name="card_statusField" nillable="true" type="xs:string" />
+      <xs:element name="card_typeField" nillable="true" type="xs:string" />
+      <xs:element name="cash_limitField" nillable="true" type="xs:string" />
+      <xs:element name="cif_idField" nillable="true" type="xs:string" />
+      <xs:element name="closing_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="current_payment_dueField" nillable="true" type="xs:string" />
+      <xs:element name="due_dateField" nillable="true" type="xs:string" />
+      <xs:element name="expiry_dateField" nillable="true" type="xs:string" />
+      <xs:element name="interest_freeField" nillable="true" type="xs:string" />
+      <xs:element name="interest_this_statementField" nillable="true" type="xs:string" />
+      <xs:element name="last_payment_amountField" nillable="true" type="xs:string" />
+      <xs:element name="last_payment_dateField" nillable="true" type="xs:string" />
+      <xs:element name="last_purchase_amountField" nillable="true" type="xs:string" />
+      <xs:element name="last_purchase_dateField" nillable="true" type="xs:string" />
+      <xs:element name="min_paymentField" nillable="true" type="xs:string" />
+      <xs:element name="opening_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="outstanding_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="overlimit_amountField" nillable="true" type="xs:string" />
+      <xs:element name="overlimit_flagField" nillable="true" type="xs:string" />
+      <xs:element name="past_due_amountField" nillable="true" type="xs:string" />
+      <xs:element name="past_due_flagField" nillable="true" type="xs:string" />
+      <xs:element name="product_typeField" nillable="true" type="xs:string" />
+      <xs:element name="renewal_card_flagField" nillable="true" type="xs:string" />
+      <xs:element name="reward_programsField" nillable="true" type="tns:ArrayOfRewardPrograms" />
+      <xs:element name="total_dueField" nillable="true" type="xs:string" />
+      <xs:element name="total_payment_dueField" nillable="true" type="xs:string" />
+      <xs:element name="unbilled_amountField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CardStmtDetailsNode" nillable="true" type="tns:CardStmtDetailsNode" />
+  <xs:complexType name="ArrayOfresponse_card_statementBodyPlans">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="response_card_statementBodyPlans" nillable="true" type="tns:response_card_statementBodyPlans" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfresponse_card_statementBodyPlans" nillable="true" type="tns:ArrayOfresponse_card_statementBodyPlans" />
+  <xs:complexType name="response_card_statementBodyPlans">
+    <xs:sequence>
+      <xs:element name="credit_planField" nillable="true" type="xs:string" />
+      <xs:element name="current_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="interestField" nillable="true" type="xs:string" />
+      <xs:element name="minimum_paymentField" nillable="true" type="xs:string" />
+      <xs:element name="payment_creditedField" nillable="true" type="xs:string" />
+      <xs:element name="plan_numberField" nillable="true" type="xs:string" />
+      <xs:element name="previous_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="purchase_debitField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_card_statementBodyPlans" nillable="true" type="tns:response_card_statementBodyPlans" />
+  <xs:complexType name="ArrayOfStatementsDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatementsDetails" nillable="true" type="tns:StatementsDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatementsDetails" nillable="true" type="tns:ArrayOfStatementsDetails" />
+  <xs:complexType name="StatementsDetails">
+    <xs:sequence>
+      <xs:element name="card_account_available_creditField" nillable="true" type="xs:string" />
+      <xs:element name="card_account_limitField" nillable="true" type="xs:string" />
+      <xs:element name="card_account_noField" nillable="true" type="xs:string" />
+      <xs:element name="cashadv_totalField" nillable="true" type="xs:string" />
+      <xs:element name="due_date_stmtField" nillable="true" type="xs:string" />
+      <xs:element name="due_date_with_grace_periodField" nillable="true" type="xs:string" />
+      <xs:element name="last_statement_dateField" nillable="true" type="xs:string" />
+      <xs:element name="memo_creditField" nillable="true" type="xs:string" />
+      <xs:element name="memo_debitField" nillable="true" type="xs:string" />
+      <xs:element name="min_payField" nillable="true" type="xs:string" />
+      <xs:element name="past_due_amountField" nillable="true" type="xs:string" />
+      <xs:element name="purchases_totalField" nillable="true" type="xs:string" />
+      <xs:element name="statement_closing_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="statement_dateField" nillable="true" type="xs:string" />
+      <xs:element name="statement_opening_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="statement_outstanding_balanceField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatementsDetails" nillable="true" type="tns:StatementsDetails" />
+  <xs:complexType name="request_card_pin_verification">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:request_card_pin_verificationBody" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_card_pin_verification" nillable="true" type="tns:request_card_pin_verification" />
+  <xs:complexType name="request_card_pin_verificationBody">
+    <xs:sequence>
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+      <xs:element name="card_typeField" nillable="true" type="xs:string" />
+      <xs:element name="expiry_dateField" nillable="true" type="xs:string" />
+      <xs:element name="pinField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_card_pin_verificationBody" nillable="true" type="tns:request_card_pin_verificationBody" />
+  <xs:complexType name="response_card_pin_verification">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="xs:string" />
+      <xs:element name="exception_detailsField" nillable="true" type="tns:ErrorMessageType" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_card_pin_verification" nillable="true" type="tns:response_card_pin_verification" />
+  <xs:complexType name="request_card_posted_transactions">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:request_card_posted_transactionsBody" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_card_posted_transactions" nillable="true" type="tns:request_card_posted_transactions" />
+  <xs:complexType name="request_card_posted_transactionsBody">
+    <xs:sequence>
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+      <xs:element name="no_of_transactionsField" nillable="true" type="xs:string" />
+      <xs:element name="transaction_from_dateField" nillable="true" type="xs:string" />
+      <xs:element name="transaction_pointerField" nillable="true" type="xs:string" />
+      <xs:element name="transaction_to_dateField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_card_posted_transactionsBody" nillable="true" type="tns:request_card_posted_transactionsBody" />
+  <xs:complexType name="response_card_posted_transactions">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:response_card_posted_transactionsBody" />
+      <xs:element name="exception_detailsField" nillable="true" type="tns:ErrorMessageType" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_card_posted_transactions" nillable="true" type="tns:response_card_posted_transactions" />
+  <xs:complexType name="response_card_posted_transactionsBody">
+    <xs:sequence>
+      <xs:element name="card_detailsField" nillable="true" type="tns:CardMiniStmtNode" />
+      <xs:element name="end_of_txns_indicatorField" nillable="true" type="xs:string" />
+      <xs:element name="total_no_of_transactionsField" nillable="true" type="xs:string" />
+      <xs:element name="transaction_detailsField" nillable="true" type="tns:ArrayOftransaction" />
+      <xs:element name="transaction_pointerField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_card_posted_transactionsBody" nillable="true" type="tns:response_card_posted_transactionsBody" />
+  <xs:complexType name="request_maintain_card_customer_details">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:request_maintain_card_customer_detailsBody" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_maintain_card_customer_details" nillable="true" type="tns:request_maintain_card_customer_details" />
+  <xs:complexType name="request_maintain_card_customer_detailsBody">
+    <xs:sequence>
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+      <xs:element name="cif_idField" nillable="true" type="xs:string" />
+      <xs:element name="customerField" nillable="true" type="tns:customer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_maintain_card_customer_detailsBody" nillable="true" type="tns:request_maintain_card_customer_detailsBody" />
+  <xs:complexType name="customer">
+    <xs:sequence>
+      <xs:element name="address_detailsField" nillable="true" type="tns:ArrayOfAddressDetails1" />
+      <xs:element name="contact_detailsField" nillable="true" type="tns:ArrayOfContactDetails1" />
+      <xs:element name="employment_detailsField" nillable="true" type="tns:EmploymentDetails1" />
+      <xs:element name="other_detailsField" nillable="true" type="tns:OtherDetails1" />
+      <xs:element name="personal_detailsField" nillable="true" type="tns:PersonalDetails1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="customer" nillable="true" type="tns:customer" />
+  <xs:complexType name="ArrayOfAddressDetails1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AddressDetails1" nillable="true" type="tns:AddressDetails1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddressDetails1" nillable="true" type="tns:ArrayOfAddressDetails1" />
+  <xs:complexType name="AddressDetails1">
+    <xs:sequence>
+      <xs:element name="address_line_1Field" nillable="true" type="xs:string" />
+      <xs:element name="address_line_2Field" nillable="true" type="xs:string" />
+      <xs:element name="address_typeField" nillable="true" type="xs:string" />
+      <xs:element name="building_nameField" nillable="true" type="xs:string" />
+      <xs:element name="cityField" nillable="true" type="xs:string" />
+      <xs:element name="countryField" nillable="true" type="xs:string" />
+      <xs:element name="house_numberField" nillable="true" type="xs:string" />
+      <xs:element name="landlord_nameField" nillable="true" type="xs:string" />
+      <xs:element name="locationField" nillable="true" type="xs:string" />
+      <xs:element name="ownership_typeField" nillable="true" type="xs:string" />
+      <xs:element name="stateField" nillable="true" type="xs:string" />
+      <xs:element name="streetField" nillable="true" type="xs:string" />
+      <xs:element name="zipField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddressDetails1" nillable="true" type="tns:AddressDetails1" />
+  <xs:complexType name="ArrayOfContactDetails1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactDetails1" nillable="true" type="tns:ContactDetails1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContactDetails1" nillable="true" type="tns:ArrayOfContactDetails1" />
+  <xs:complexType name="ContactDetails1">
+    <xs:sequence>
+      <xs:element name="contact_noField" nillable="true" type="xs:string" />
+      <xs:element name="contact_typeField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactDetails1" nillable="true" type="tns:ContactDetails1" />
+  <xs:complexType name="EmploymentDetails1">
+    <xs:sequence>
+      <xs:element name="company_nameField" nillable="true" type="xs:string" />
+      <xs:element name="employer_address1Field" nillable="true" type="xs:string" />
+      <xs:element name="employer_address2Field" nillable="true" type="xs:string" />
+      <xs:element name="employer_nameField" nillable="true" type="xs:string" />
+      <xs:element name="occupationField" nillable="true" type="xs:string" />
+      <xs:element name="staff_idField" nillable="true" type="xs:string" />
+      <xs:element name="years_workedField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmploymentDetails1" nillable="true" type="tns:EmploymentDetails1" />
+  <xs:complexType name="OtherDetails1">
+    <xs:sequence>
+      <xs:element name="memo_line_1Field" nillable="true" type="xs:string" />
+      <xs:element name="memo_line_2Field" nillable="true" type="xs:string" />
+      <xs:element name="sms_flagField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OtherDetails1" nillable="true" type="tns:OtherDetails1" />
+  <xs:complexType name="PersonalDetails1">
+    <xs:sequence>
+      <xs:element name="date_of_birthField" nillable="true" type="xs:string" />
+      <xs:element name="driving_license_noField" nillable="true" type="xs:string" />
+      <xs:element name="email_addressField" nillable="true" type="xs:string" />
+      <xs:element name="genderField" nillable="true" type="xs:string" />
+      <xs:element name="home_phone_noField" nillable="true" type="xs:string" />
+      <xs:element name="mobile_phone_noField" nillable="true" type="xs:string" />
+      <xs:element name="mothers_maiden_nameField" nillable="true" type="xs:string" />
+      <xs:element name="mothers_nameField" nillable="true" type="xs:string" />
+      <xs:element name="name_line_1Field" nillable="true" type="xs:string" />
+      <xs:element name="name_line_2Field" nillable="true" type="xs:string" />
+      <xs:element name="name_line_3Field" nillable="true" type="xs:string" />
+      <xs:element name="nationalityField" nillable="true" type="xs:string" />
+      <xs:element name="no_of_dependentsField" nillable="true" type="xs:string" />
+      <xs:element name="passport_nameField" nillable="true" type="xs:string" />
+      <xs:element name="passport_noField" nillable="true" type="xs:string" />
+      <xs:element name="preferred_nameField" nillable="true" type="xs:string" />
+      <xs:element name="short_nameField" nillable="true" type="xs:string" />
+      <xs:element name="statement_flagField" nillable="true" type="xs:string" />
+      <xs:element name="typeField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalDetails1" nillable="true" type="tns:PersonalDetails1" />
+  <xs:complexType name="response_maintain_card_customer_details">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="xs:string" />
+      <xs:element name="exception_detailsField" nillable="true" type="tns:ErrorMessageType" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_maintain_card_customer_details" nillable="true" type="tns:response_maintain_card_customer_details" />
+  <xs:complexType name="request_card_payment">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:CardPaymentReq" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_card_payment" nillable="true" type="tns:request_card_payment" />
+  <xs:complexType name="CardPaymentReq">
+    <xs:sequence>
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+      <xs:element name="channelField" nillable="true" type="xs:string" />
+      <xs:element name="transaction_amountField" nillable="true" type="xs:string" />
+      <xs:element name="transaction_descriptionField" nillable="true" type="xs:string" />
+      <xs:element name="txn_reference_idField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CardPaymentReq" nillable="true" type="tns:CardPaymentReq" />
+  <xs:complexType name="response_card_payment">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:CardPaymentRes" />
+      <xs:element name="exception_detailsField" nillable="true" type="tns:ErrorMessageType" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_card_payment" nillable="true" type="tns:response_card_payment" />
+  <xs:complexType name="CardPaymentRes">
+    <xs:sequence>
+      <xs:element name="host_ref_idField" nillable="true" type="xs:string" />
+      <xs:element name="source_ref_idField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CardPaymentRes" nillable="true" type="tns:CardPaymentRes" />
+  <xs:complexType name="request_card_activation_set_pin">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:request_card_activation_set_pinBody" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_card_activation_set_pin" nillable="true" type="tns:request_card_activation_set_pin" />
+  <xs:complexType name="request_card_activation_set_pinBody">
+    <xs:sequence>
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+      <xs:element name="card_typeField" nillable="true" type="xs:string" />
+      <xs:element name="pinField" nillable="true" type="xs:string" />
+      <xs:element name="request_typeField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_card_activation_set_pinBody" nillable="true" type="tns:request_card_activation_set_pinBody" />
+  <xs:complexType name="response_card_activation_set_pin">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:response_card_activation_set_pinBody" />
+      <xs:element name="exception_detailsField" nillable="true" type="tns:ErrorMessageType" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_card_activation_set_pin" nillable="true" type="tns:response_card_activation_set_pin" />
+  <xs:complexType name="response_card_activation_set_pinBody">
+    <xs:sequence>
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_card_activation_set_pinBody" nillable="true" type="tns:response_card_activation_set_pinBody" />
+  <xs:complexType name="request_credit_card_list">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:request_credit_card_listBody" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_credit_card_list" nillable="true" type="tns:request_credit_card_list" />
+  <xs:complexType name="request_credit_card_listBody">
+    <xs:sequence>
+      <xs:element name="itemField" nillable="true" type="xs:anyType" />
+      <xs:element name="orgIdField" nillable="true" type="xs:string" />
+      <xs:element name="scrollTypeField" nillable="true" type="xs:string" />
+      <xs:element name="transactionPointerField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="request_credit_card_listBody" nillable="true" type="tns:request_credit_card_listBody" />
+  <xs:complexType name="response_creditcardlist">
+    <xs:sequence>
+      <xs:element name="bodyField" nillable="true" type="tns:response_creditcardlistBody" />
+      <xs:element name="exception_detailsField" nillable="true" type="tns:ErrorMessageType" />
+      <xs:element name="headerField" nillable="true" type="tns:HeaderType1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_creditcardlist" nillable="true" type="tns:response_creditcardlist" />
+  <xs:complexType name="response_creditcardlistBody">
+    <xs:sequence>
+      <xs:element name="cards_countField" nillable="true" type="xs:string" />
+      <xs:element name="ccard_detailsField" nillable="true" type="tns:ArrayOfresponse_creditcardlistBodyCcard_details" />
+      <xs:element name="cif_idField" nillable="true" type="xs:string" />
+      <xs:element name="eofField" nillable="true" type="xs:string" />
+      <xs:element name="tranptrField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_creditcardlistBody" nillable="true" type="tns:response_creditcardlistBody" />
+  <xs:complexType name="ArrayOfresponse_creditcardlistBodyCcard_details">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="response_creditcardlistBodyCcard_details" nillable="true" type="tns:response_creditcardlistBodyCcard_details" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfresponse_creditcardlistBodyCcard_details" nillable="true" type="tns:ArrayOfresponse_creditcardlistBodyCcard_details" />
+  <xs:complexType name="response_creditcardlistBodyCcard_details">
+    <xs:sequence>
+      <xs:element name="acc_available_bal_amtField" nillable="true" type="xs:string" />
+      <xs:element name="account_block_code1Field" nillable="true" type="xs:string" />
+      <xs:element name="account_block_code2Field" nillable="true" type="xs:string" />
+      <xs:element name="available_cashField" nillable="true" type="xs:string" />
+      <xs:element name="available_creditField" nillable="true" type="xs:string" />
+      <xs:element name="card_account_available_creditField" nillable="true" type="xs:string" />
+      <xs:element name="card_account_limitField" nillable="true" type="xs:string" />
+      <xs:element name="card_accountnoField" nillable="true" type="xs:string" />
+      <xs:element name="card_block_codeField" nillable="true" type="xs:string" />
+      <xs:element name="card_brandField" nillable="true" type="xs:string" />
+      <xs:element name="card_currencyField" nillable="true" type="xs:string" />
+      <xs:element name="card_delivery_codeField" nillable="true" type="xs:string" />
+      <xs:element name="card_limitField" nillable="true" type="xs:string" />
+      <xs:element name="card_nameField" nillable="true" type="xs:string" />
+      <xs:element name="card_noField" nillable="true" type="xs:string" />
+      <xs:element name="card_productField" nillable="true" type="xs:string" />
+      <xs:element name="card_statusField" nillable="true" type="xs:string" />
+      <xs:element name="card_typeField" nillable="true" type="xs:string" />
+      <xs:element name="cardlogo_descriptionField" nillable="true" type="xs:string" />
+      <xs:element name="cash_limitField" nillable="true" type="xs:string" />
+      <xs:element name="customer_typeField" nillable="true" type="xs:string" />
+      <xs:element name="due_dateField" nillable="true" type="xs:string" />
+      <xs:element name="duedate_Withgrace_PeriodField" nillable="true" type="xs:string" />
+      <xs:element name="expiry_dateField" nillable="true" type="xs:string" />
+      <xs:element name="limit_typeField" nillable="true" type="xs:string" />
+      <xs:element name="logoField" nillable="true" type="xs:string" />
+      <xs:element name="min_paymentField" nillable="true" type="xs:string" />
+      <xs:element name="newexpiry_dateField" nillable="true" type="xs:string" />
+      <xs:element name="orgField" nillable="true" type="xs:string" />
+      <xs:element name="outstanding_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="overdraw_amountField" nillable="true" type="xs:string" />
+      <xs:element name="overdraw_flagField" nillable="true" type="xs:string" />
+      <xs:element name="overlimit_amountField" nillable="true" type="xs:string" />
+      <xs:element name="pastdue_amountField" nillable="true" type="xs:string" />
+      <xs:element name="pastdue_flagField" nillable="true" type="xs:string" />
+      <xs:element name="renewal_cardflagField" nillable="true" type="xs:string" />
+      <xs:element name="statement_closing_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="statement_dateField" nillable="true" type="xs:string" />
+      <xs:element name="statement_opening_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="statement_outstanding_balanceField" nillable="true" type="xs:string" />
+      <xs:element name="temp_limit_inc_flagField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="response_creditcardlistBodyCcard_details" nillable="true" type="tns:response_creditcardlistBodyCcard_details" />
+</xs:schema>
